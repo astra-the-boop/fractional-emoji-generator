@@ -53,11 +53,25 @@ async function main(src1: string, src2: string){
     const img2: HTMLImageElement = await loadImage(src2);
 
     if(document.getElementById("upvote")!==null){
-        // @ts-ignore
-        let percentage:number = document.getElementById("upvote").value;
+        let upvote:HTMLInputElement = document.getElementById("upvote") as HTMLInputElement;
+        let percentage:number = Number(upvote.value);
         const canvas = drawSectorOverlay(img1, img2, percentage);
         downloadCanvas(canvas, "result.png");
     }
 }
+
+
+document.getElementById("upvote")?.addEventListener("change", function(){
+    let downvote: HTMLInputElement = document.getElementById("downvote") as HTMLInputElement;
+    let upvote: HTMLInputElement = document.getElementById("upvote") as HTMLInputElement;
+    downvote.value = String(100 - Number(upvote.value));
+});
+
+
+document.getElementById("downvote")?.addEventListener("change", function(){
+    let downvote: HTMLInputElement = document.getElementById("downvote") as HTMLInputElement;
+    let upvote: HTMLInputElement = document.getElementById("upvote") as HTMLInputElement;
+    upvote.value = String(100 - Number(downvote.value));
+});
 
 // main("img/downvote.png", "img/upvote.png", 25);
