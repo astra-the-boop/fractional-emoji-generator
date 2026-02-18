@@ -31,9 +31,23 @@
 
 body{
     font-family: 'Phantom Sans', sans-serif;
+    text-align: center;
+    background-color: ;
 }
 
 .icon{
     height: 1.5rem;
-    margin-bottom: -0.5rem;
+    margin-bottom: -0.2rem;
+}
+
+input{
+    all: revert;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    height: 2rem;
+    width: 5rem;
+    font-size: 1.3rem;
+    text-align: right;
 }

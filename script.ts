@@ -65,6 +65,14 @@ document.getElementById("upvote")?.addEventListener("change", function(){
     let downvote: HTMLInputElement = document.getElementById("downvote") as HTMLInputElement;
     let upvote: HTMLInputElement = document.getElementById("upvote") as HTMLInputElement;
     downvote.value = String(100 - Number(upvote.value));
+    if(Number(upvote.value)>=100){
+        upvote.value = "100";
+        downvote.value = "0";
+    }
+    if(Number(upvote.value)<=0){
+        upvote.value = "0";
+        downvote.value = "100";
+    }
 });
 
 
@@ -72,6 +80,14 @@ document.getElementById("downvote")?.addEventListener("change", function(){
     let downvote: HTMLInputElement = document.getElementById("downvote") as HTMLInputElement;
     let upvote: HTMLInputElement = document.getElementById("upvote") as HTMLInputElement;
     upvote.value = String(100 - Number(downvote.value));
+    if(Number(downvote.value)>=100){
+        downvote.value = "100";
+        upvote.value = "0";
+    }
+    if(Number(downvote.value) <= 0){
+        downvote.value = "0";
+        upvote.value = "100";
+    }
 });
 
 // main("img/downvote.png", "img/upvote.png", 25);
