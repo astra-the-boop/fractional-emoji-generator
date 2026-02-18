@@ -32,7 +32,7 @@
 body{
     font-family: 'Phantom Sans', sans-serif;
     text-align: center;
-    background-color: ;
+    /*background-color: ;*/
 }
 
 .icon{
@@ -50,4 +50,21 @@ input{
     width: 5rem;
     font-size: 1.3rem;
     text-align: right;
+}
+
+button{
+    background-color: #8492a6;
+    color: white;
+    font-family: "Phantom Sans", sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.3rem;
+    border: none;
+    margin-top: 1rem;
+    transition: background-color 0.15s ease-in-out;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #566171;
 }
