@@ -1,15 +1,17 @@
 function drawSectorOverlay(
+    canvas: HTMLCanvasElement,
     img1: HTMLImageElement,
     img2: HTMLImageElement,
     crop: number
 ): HTMLCanvasElement{
-    const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d")!;
 
     const W = img1.naturalWidth;
     const H = img1.naturalHeight;
     canvas.width = W;
     canvas.height = H;
+
+    ctx.clearRect(0, 0, W, H);
 
     ctx.drawImage(img1, 0, 0, W, H);
 
@@ -49,14 +51,15 @@ function loadImage(src: string): Promise<HTMLImageElement> {
 }
 
 async function main(src1: string, src2: string){
+    let downvote: HTMLInputElement = document.getElementById("downvote") as HTMLInputElement;
+    let upvote: HTMLInputElement = document.getElementById("upvote") as HTMLInputElement;
     const img1: HTMLImageElement = await loadImage(src1);
     const img2: HTMLImageElement = await loadImage(src2);
 
     if(document.getElementById("upvote")!==null){
-        let upvote:HTMLInputElement = document.getElementById("upvote") as HTMLInputElement;
         let percentage:number = Number(upvote.value);
         const canvas = drawSectorOverlay(img1, img2, percentage);
-        downloadCanvas(canvas, "result.png");
+        downloadCanvas(canvas, `${upvote.value}-percent-upvote-${downvote.value}-percent-downvote.png`);
     }
 }
 

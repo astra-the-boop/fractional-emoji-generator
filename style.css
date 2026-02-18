@@ -68,3 +68,7 @@ button:hover{
     cursor: pointer;
     background-color: #566171;
 }
+
+h1{
+    margin-top: 3rem;
+}
