@@ -48,3 +48,12 @@ function loadImage(src: string): Promise<HTMLImageElement> {
     })
 }
 
+async function main(src1: string, src2: string, percentage: number){
+    const img1: HTMLImageElement = await loadImage(src1);
+    const img2: HTMLImageElement = await loadImage(src2);
+
+    const canvas = drawSectorOverlay(img1, img2, percentage);
+    downloadCanvas(canvas, "result.png");
+}
+
+main("img/downvote.png", "img/upvote.png", 28)
