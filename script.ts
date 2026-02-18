@@ -17,7 +17,7 @@ function drawSectorOverlay(
     const cx = W / 2;
     const cy = H / 2;
     const radius = Math.sqrt(W*W+H*H);
-    const startAngle = -Math.PI / 2;
+    const startAngle = Math.PI;
     const endAngle = startAngle + 2 * Math.PI * pct;
 
     ctx.save();
@@ -48,12 +48,16 @@ function loadImage(src: string): Promise<HTMLImageElement> {
     })
 }
 
-async function main(src1: string, src2: string, percentage: number){
+async function main(src1: string, src2: string){
     const img1: HTMLImageElement = await loadImage(src1);
     const img2: HTMLImageElement = await loadImage(src2);
 
-    const canvas = drawSectorOverlay(img1, img2, percentage);
-    downloadCanvas(canvas, "result.png");
+    if(document.getElementById("upvote")!==null){
+        // @ts-ignore
+        let percentage:number = document.getElementById("upvote").value;
+        const canvas = drawSectorOverlay(img1, img2, percentage);
+        downloadCanvas(canvas, "result.png");
+    }
 }
 
-main("img/downvote.png", "img/upvote.png", 28)
+// main("img/downvote.png", "img/upvote.png", 25);

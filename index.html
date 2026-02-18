@@ -6,12 +6,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>fractional emoji genderator</h1>
+    <h1>fractional up/downvote genderator</h1>
     <div>
         <div>
-            <label>Percentage: <span id="percentageLabel">50</span>%</label><br>
-            <input type="range" id="percent" min="0" max="100" value="50">
+            <input type="number" min="1" max="100" value="50" id="upvote">% <img src="https://cdn.hackclub.com/019c6cd9-bda7-78e6-a495-2860d91c31c1/d693573711171cb6.png" class="icon"><br><br>
+            <input type="number" min="1" max="100" value="50" id="downvote">% <img src="https://cdn.hackclub.com/019c6cd9-bf97-75db-a72a-c94b109f6d43/d0791c2c9a6d032a.png" class="icon">
         </div>
+
+        <button onclick="main('img/downvote.png', 'img/upvote.png')">Kaboom</button>
 
     </div>
     <canvas id="canvas"></canvas>
