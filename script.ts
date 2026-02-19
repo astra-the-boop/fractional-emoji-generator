@@ -125,8 +125,6 @@ const kaboom:string[] = ["alex told me to tell y'all to check out https://amogus
 "Le fraud",
 "Concorde is a retired Anglo-French supersonic airliner jointly developed and manufactured by Sud Aviation and the British Aircraft Corporation (BAC)."];
 
-
-
 function sillyShitBecauseINeedMyHackatimeHours(){
     const min = 20000;
     const max = 150000;
@@ -140,7 +138,6 @@ function sillyShitBecauseINeedMyHackatimeHours(){
 
     marginTop += 0.1;
     downloadEl.style.marginTop=`${marginTop}rem`;
-
 
     setTimeout(()=>{
         window.open("ad.html",":3");

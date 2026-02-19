@@ -7,4 +7,4 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(random);
     console.log(shit);
     ad.src = shit;
-})
+});
