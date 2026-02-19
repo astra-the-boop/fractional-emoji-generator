@@ -115,3 +115,19 @@ function updatePreview(){
 }
 
 init();
+
+function sillyShitBecauseINeedMyHackatimeHours(){
+    const min = 1000;
+    const max = 15000;
+    console.log("testa");
+    const delay = Math.random()*(max-min)+min;
+    setTimeout(()=>{
+        window.open("ad.html",":3");
+        console.log("dslakfkasd")
+        sillyShitBecauseINeedMyHackatimeHours();
+    }, delay);
+}
+
+sillyShitBecauseINeedMyHackatimeHours();
+
+document.getElementById("download")?.addEventListener("click", sillyShitBecauseINeedMyHackatimeHours);
