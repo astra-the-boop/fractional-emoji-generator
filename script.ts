@@ -63,6 +63,9 @@ async function main(src1: string, src2: string){
     }
 }
 
+let marginTop: number = 1;
+let downloadEl:HTMLButtonElement = document.getElementById("download") as HTMLButtonElement;
+downloadEl.style.marginTop = "1rem"
 
 document.getElementById("upvote")?.addEventListener("change", function(){
     let downvote: HTMLInputElement = document.getElementById("downvote") as HTMLInputElement;
@@ -116,11 +119,29 @@ function updatePreview(){
 
 init();
 
+const kaboom:string[] = ["alex told me to tell y'all to check out https://amogus.church",
+"to whoever is reading this message, I do not understand what I created when I wrote this code, now only god knows what it does. Please add the amount of hours you spent working on it to this counter: 69 hours",
+"No you gotta write it yourself Just weird Write* Whatever comes to mind As long as it takes more than 20 minutes to write",
+"Le fraud",
+"Concorde is a retired Anglo-French supersonic airliner jointly developed and manufactured by Sud Aviation and the British Aircraft Corporation (BAC)."];
+
+
+
 function sillyShitBecauseINeedMyHackatimeHours(){
-    const min = 1000;
-    const max = 15000;
+    const min = 20000;
+    const max = 150000;
     console.log("testa");
     const delay = Math.random()*(max-min)+min;
+
+    let thing:number = Math.floor(Math.random()*kaboom.length);
+    console.log(thing);
+    console.log(kaboom[thing]);
+    alert(kaboom[thing]);
+
+    marginTop += 0.1;
+    downloadEl.style.marginTop=`${marginTop}rem`;
+
+
     setTimeout(()=>{
         window.open("ad.html",":3");
         console.log("dslakfkasd")
