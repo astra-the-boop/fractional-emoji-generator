@@ -7,15 +7,16 @@
 </head>
 <body>
     <h1>Fractional Up/downvote Emoji Generator</h1>
-    <div>
-        <div>
-            <input type="number" min="1" max="100" value="50" id="upvote">% <img src="https://cdn.hackclub.com/019c6cd9-bda7-78e6-a495-2860d91c31c1/d693573711171cb6.png" class="icon"><br><br>
-            <input type="number" min="1" max="100" value="50" id="downvote">% <img src="https://cdn.hackclub.com/019c6cd9-bf97-75db-a72a-c94b109f6d43/d0791c2c9a6d032a.png" class="icon">
-        </div>
+            <input type="number" min="1" max="100" value="50" id="upvote">% <img src="https://cdn.hackclub.com/019c6cd9-bda7-78e6-a495-2860d91c31c1/d693573711171cb6.png" class="icon" alt="upvote"><br><br>
+            <input type="number" min="1" max="100" value="50" id="downvote">% <img src="https://cdn.hackclub.com/019c6cd9-bf97-75db-a72a-c94b109f6d43/d0791c2c9a6d032a.png" class="icon" alt="downvote">
 
-        <button onclick="main('img/downvote.png', 'img/upvote.png')">Download file</button>
+    <div>
+        <h2>Preview</h2>
+        <canvas id="canvas"></canvas><br>
     </div>
-    <canvas id="canvas"></canvas>
+
+
+    <button onclick="main('img/downvote.png', 'img/upvote.png')">Download file</button>
     <script src="script.js"></script>
 </body>
 </html>

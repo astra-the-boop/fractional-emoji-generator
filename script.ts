@@ -58,7 +58,7 @@ async function main(src1: string, src2: string){
 
     if(document.getElementById("upvote")!==null){
         let percentage:number = Number(upvote.value);
-        const canvas = drawSectorOverlay(img1, img2, percentage);
+        const canvas = drawSectorOverlay(document.getElementById("canvas") as HTMLCanvasElement, img1, img2, percentage);
         downloadCanvas(canvas, `${upvote.value}-percent-upvote-${downvote.value}-percent-downvote.png`);
     }
 }
@@ -76,6 +76,8 @@ document.getElementById("upvote")?.addEventListener("change", function(){
         upvote.value = "0";
         downvote.value = "100";
     }
+
+    updatePreview();
 });
 
 
@@ -91,6 +93,25 @@ document.getElementById("downvote")?.addEventListener("change", function(){
         downvote.value = "0";
         upvote.value = "100";
     }
+
+    updatePreview()
 });
 
-// main("img/downvote.png", "img/upvote.png", 25);
+let previewCanvas = document.getElementById("canvas") as HTMLCanvasElement;
+let img1: HTMLImageElement;
+let img2: HTMLImageElement;
+
+async function init() {
+    img1 = await loadImage("img/downvote.png");
+    img2 = await loadImage("img/upvote.png");
+    updatePreview()
+}
+
+function updatePreview(){
+    const upvote = document.getElementById("upvote") as HTMLInputElement;
+    const percentage = Number(upvote.value);
+
+    drawSectorOverlay(previewCanvas, img1, img2, percentage);
+}
+
+init();
