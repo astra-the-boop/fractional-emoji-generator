@@ -123,7 +123,8 @@ const kaboom:string[] = ["alex told me to tell y'all to check out https://amogus
 "to whoever is reading this message, I do not understand what I created when I wrote this code, now only god knows what it does. Please add the amount of hours you spent working on it to this counter: 69 hours",
 "No you gotta write it yourself Just weird Write* Whatever comes to mind As long as it takes more than 20 minutes to write",
 "Le fraud",
-"Concorde is a retired Anglo-French supersonic airliner jointly developed and manufactured by Sud Aviation and the British Aircraft Corporation (BAC)."];
+"Concorde is a retired Anglo-French supersonic airliner jointly developed and manufactured by Sud Aviation and the British Aircraft Corporation (BAC).",
+"The Hack Foundation (d.b.a. Hack Club) is a 501(c)(3) non-profit organization based in California aiming to teach and encourage teenagers to code, engineer, and develop."];
 
 function sillyShitBecauseINeedMyHackatimeHours(){
     const min = 20000;
