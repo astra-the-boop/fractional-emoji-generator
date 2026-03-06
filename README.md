@@ -24,6 +24,7 @@ done.
 # how to run this thing
 
 ```bash
+tsc
 npx serve .
 ```
 
