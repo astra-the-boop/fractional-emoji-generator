@@ -150,3 +150,8 @@ function sillyShitBecauseINeedMyHackatimeHours(){
 sillyShitBecauseINeedMyHackatimeHours();
 
 document.getElementById("download")?.addEventListener("click", sillyShitBecauseINeedMyHackatimeHours);
+
+//kim jong un is a master of goon
+//me and p diddy had a sneaky sneaky link
+//he showed me his giant dingaling
+//jeffrey epstein touched me when i was a teen

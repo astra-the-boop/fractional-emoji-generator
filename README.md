@@ -23,15 +23,6 @@ done.
 
 # how to run this thing
 
-i'm tired as hell
-
-```bash
-tsc
-```
-in root folder or something idk; just get the script.js file from the script.ts file someone else probably knows better
-
-and then uhhhhhhhhh idk try doing
-
 ```bash
 npx serve .
 ```
